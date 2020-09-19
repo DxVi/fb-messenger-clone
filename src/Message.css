@@ -11,10 +11,16 @@
 }
 
 .message__userCard{
+    color: white !important;
     background-color: #0b81ff !important;
+    background: linear-gradient(145deg, dodgerblue,blue);
+    opacity:.80;
     
 }
 
 .message__guestCard{
+    color: blue !important;
     background-color: #e9e9eb !important;
+    background: linear-gradient(145deg, antiquewhite,lightgreen);
+    opacity:.70;
 }
