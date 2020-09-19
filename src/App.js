@@ -1,10 +1,11 @@
-import { Button, FormControl, Input, InputLabel } from '@material-ui/core';
+import { FormControl, Input, IconButton } from '@material-ui/core';
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import db from './firebase';
 import Message from './Message';
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
+import SendIcon from '@material-ui/icons/Send';
 
 function App() {
   const [input, setInput] = useState('');
@@ -40,9 +41,9 @@ function App() {
   return (
     <div className="App">
       <div className="app__header">
-        <img src="https://facebookbrand.com/wp-content/uploads/2018/09/header-e1538151782912.png?w=100&h=100" alt=""/>
-        <h1>fb Messenger Clone</h1>
-        <h2>Welcome {username}</h2>
+            <img src="https://facebookbrand.com/wp-content/uploads/2018/09/header-e1538151782912.png?w=50&h=50" alt=""/>
+            <h1>fb Messenger Clone</h1>
+            <h2>Welcome {username}</h2>
       </div>
       <div className="app__message">
               <FlipMove>
@@ -53,12 +54,13 @@ function App() {
               }
               </FlipMove>
       </div>
-      <div className="app__input">
+      <div className="app__footer">
         <form>
-          <FormControl>        
-                  <InputLabel className="input__label">Enter a message</InputLabel>
-                  <Input onChange={event => setInput(event.target.value)} value={input}/>
-                  <Button type="submit" disabled={!input} color="primary" variant="contained" onClick={sendMessage}>Send Message</Button>
+          <FormControl className="app__input">        
+            <Input className="input__label" placeholder="Enter a message..." onChange={event => setInput(event.target.value)} value={input}/>
+            <IconButton className="input__button" type="submit" disabled={!input} color="primary" variant="contained" onClick={sendMessage}>
+              <SendIcon />
+            </IconButton>
           </FormControl>        
         </form>
       </div>

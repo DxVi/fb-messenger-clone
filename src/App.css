@@ -2,47 +2,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 
 .app__header{
-  flex-basis: 10%;
+  margin-top: 5px;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  line-height: 0;
 }
 
 .app__header > h1{
   color: white;
   text-shadow: 2px 2px 3px black;
+  font-size: 150%;
 }
 
 .app__header > h2{
   color: salmon;
   text-shadow: 2px 2px 3px black;
+  font-size: 100%;
 }
 
 .app__message{
-  flex-basis: 80%;
+  flex-basis: 75%;
   width: 80%;
   overflow-y: scroll;
 }
 
-.app__input{
-  flex-basis:10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  /* background: linear-gradient(145deg, #2c455d,#00012c); */
+.app__footer{
+  flex-basis: 5%;
   background: linear-gradient(145deg, white,dodgerblue);
   opacity: .90;
   border-radius: 20px;
+  width: 60%;
   padding: 10px;
+}
+.app__input{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: medium;
+ 
 }
 
 .input__label{
   color: darkblue !important;
+  flex: 1;
+}
+
+.input__button{
+  flex: 0;
 }
